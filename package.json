@@ -3,18 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "camelcase-keys-deep": "^0.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "knex": "^0.19.1",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "snakecase-keys": "^3.1.0",
+    "styled-components": "^4.3.2"
   },
   "scripts": {
+    "demo": "npm ci && npm run build && npx knex migrate:latest && npx knex seed:run &&  node server/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0"
   },
   "browserslist": {
     "production": [
