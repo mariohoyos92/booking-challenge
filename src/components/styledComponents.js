@@ -124,7 +124,7 @@ export const CityStateContainer = styled.div`
 `;
 
 export const Select = styled.select`
-  width: 264px;
+  width: ${props => (props.small ? "132px" : "264px")};
   height: 33px;
 `;
 

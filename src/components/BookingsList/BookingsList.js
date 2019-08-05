@@ -7,7 +7,8 @@ import {
   BookingsTable,
   TableHeading,
   Booking,
-  BookingsActionsContainer
+  BookingsActionsContainer,
+  Select
 } from "../styledComponents";
 import { dogWalkType, houseKeepingType } from "../../constants";
 
@@ -70,11 +71,11 @@ export default function BookingsList({
         <BookingsActionsContainer>
           <div>
             <label>Filter</label>
-            <select defaultValue="" onChange={onFilterChange}>
+            <Select small defaultValue="" onChange={onFilterChange}>
               <option value="">None</option>
               <option value={dogWalkType}>Dog Walk</option>
               <option value={houseKeepingType}>Housekeeping</option>
-            </select>
+            </Select>
           </div>
           <PrimaryButton type="button" onClick={onClickCreateBooking}>
             Create Booking
